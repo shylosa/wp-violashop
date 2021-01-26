@@ -10,3 +10,7 @@
 /wp-content/themes/*
 
 !wp-content/themes/viola
+
+wp-content/themes/viola/assets/fonts
+wp-content/themes/viola/assets/webfonts
+wp-content/themes/viola/assets/images

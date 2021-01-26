@@ -100,6 +100,10 @@ if ( ! function_exists( 'viola_setup' ) ) :
 				'flex-height' => true,
 			)
 		);
+
+		add_theme_support('custom-logo');
+		add_theme_support('post-formats', array('aside', 'gallery', 'image', 'video', 'audio'));
+
 	}
 endif;
 add_action( 'after_setup_theme', 'viola_setup' );
@@ -141,9 +145,41 @@ add_action( 'widgets_init', 'viola_widgets_init' );
  */
 function viola_scripts() {
 	wp_enqueue_style( 'viola-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'viola-style', 'rtl', 'replace' );
+	wp_enqueue_style('viola-bootstrap-style', _viola_assets_path('css/bootstrap.min.css'), array(), _S_VERSION);
+	wp_enqueue_style('viola-responsive-style', _viola_assets_path('css/responsive.css'), array('viola-style'), _S_VERSION);
+	wp_enqueue_style('viola-style-style', _viola_assets_path('css/style.css'), array('viola-bootstrap-style'), _S_VERSION);
+	wp_enqueue_style('viola-custom-style', _viola_assets_path('css/custom.css'), array('viola-style-style'), _S_VERSION);
 
-	wp_enqueue_script( 'viola-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_style_add_data( 'viola-style', 'rtl', 'replace' );
+	//IE9 support
+    wp_script_add_data('https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js', 'conditional', 'lt IE 9');
+    wp_script_add_data('https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js', 'conditional', 'lt IE 9');
+
+    //Scripts
+	wp_enqueue_script( 'viola-navigation-script', get_template_directory_uri() . '/assets/js/navigation.js', array('jquery-core', 'jquery-migrate', 'viola-popper', 'viola-bootstrap'), _S_VERSION, true );
+	wp_enqueue_script( 'jquery-core', '', array(), false, true);
+	wp_enqueue_script( 'jquery-migrate', '', array('jquery-core'), false, true);
+
+    wp_enqueue_script( 'viola-popper', _viola_assets_path('js/popper.min.js'), array('jquery-migrate'), false, true);
+    wp_enqueue_script( 'viola-bootstrap', _viola_assets_path('js/bootstrap.min.js'), array('viola-popper'), false, true);
+
+    wp_enqueue_script( 'viola-jquery-superslides', _viola_assets_path('js/jquery.superslides.min.js'), array('viola-bootstrap'), false, true);
+    wp_enqueue_script( 'viola-bootstrap-select', _viola_assets_path('js/bootstrap-select.js'), array('viola-jquery-superslides'), false, true);
+    wp_enqueue_script( 'viola-inewsticker', _viola_assets_path('js/inewsticker.js'), array('viola-bootstrap-select'), false, true);
+
+    wp_enqueue_script( 'viola-bootsnav', _viola_assets_path('js/bootsnav.js'), array('viola-inewsticker'), false, true);
+    wp_enqueue_script( 'viola-images-loaded', _viola_assets_path('js/images-loaded.min.js'), array('viola-bootsnav'), false, true);
+    wp_enqueue_script( 'viola-isotope', _viola_assets_path('js/isotope.min.js'), array('viola-images-loaded'), false, true);
+
+    wp_enqueue_script( 'viola-owl-carousel', _viola_assets_path('js/owl.carousel.min.js'), array('viola-isotope'), false, true);
+    wp_enqueue_script( 'viola-baguette-box', _viola_assets_path('js/baguetteBox.min.js'), array('viola-owl-carousel'), false, true);
+    wp_enqueue_script( 'viola-jquery-ui', _viola_assets_path('js/jquery-ui.js'), array('viola-baguette-box'), false, true);
+
+    wp_enqueue_script( 'viola-form-validator', _viola_assets_path('js/form-validator.min.js'), array('viola-jquery-ui'), false, true);
+    wp_enqueue_script( 'viola-contact-form-script', _viola_assets_path('js/contact-form-script.js'), array('viola-form-validator'), false, true);
+    wp_enqueue_script( 'viola-jquery-nicescroll', _viola_assets_path('js/jquery.nicescroll.min.js'), array('viola-contact-form-script'), false, true);
+
+    wp_enqueue_script( 'viola-custom', _viola_assets_path('js/custom.js'), array('viola-jquery-nicescroll'), false, true);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -176,5 +212,16 @@ require get_template_directory() . '/inc/customizer.php';
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
+}
+
+//Custom functions
+
+/**
+ * @param string $path
+ * @return string
+ */
+function _viola_assets_path(string $path) :string
+{
+    return get_template_directory_uri() . '/assets/' . $path;
 }
 
