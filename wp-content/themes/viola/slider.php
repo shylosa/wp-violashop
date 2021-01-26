@@ -5,7 +5,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <h1 class="m-b-20"><strong><?= __('Welcome to')?><br><?= __('Viola')?></strong></h1>
+                            <h1 class="m-b-20"><strong><?= __('Welcome to', 'viola')?><br><?= __('Viola', 'viola')?></strong></h1>
                             <p class="m-b-40">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p>
                             <p><a class="btn hvr-hover" href="#">Shop New</a></p>
                         </div>
@@ -17,7 +17,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <h1 class="m-b-20"><strong><?= __('Welcome to')?><br><?= __('Viola')?></strong></h1>
+                            <h1 class="m-b-20"><strong><?= __('Welcome to', 'viola')?><br><?= __('Viola', 'viola')?></strong></h1>
                             <p class="m-b-40">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p>
                             <p><a class="btn hvr-hover" href="#">Shop New</a></p>
                         </div>
@@ -29,7 +29,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <h1 class="m-b-20"><strong><?= __('Welcome to')?><br><?= __('Viola')?></strong></h1>
+                            <h1 class="m-b-20"><strong><?= __('Welcome to', 'viola')?><br><?= __('Viola', 'viola')?></strong></h1>
                             <p class="m-b-40">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p>
                             <p><a class="btn hvr-hover" href="#">Shop New</a></p>
                         </div>

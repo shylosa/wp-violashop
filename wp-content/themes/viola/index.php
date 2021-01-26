@@ -64,7 +64,7 @@ get_header();
             <div class="row">
                 <div class="col-lg-12">
                     <div class="title-all text-center">
-                        <h1><?= __('Рекомендовані товари') ?></h1>
+                        <h1><?= __('Featured products', 'viola') ?></h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus enim.</p>
                     </div>
                 </div>

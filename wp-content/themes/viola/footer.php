@@ -32,7 +32,7 @@
                 </div>
                 <div class="col-lg-4 col-md-12 col-sm-12">
                     <div class="footer-link">
-                        <h4>Information</h4>
+                        <h4><?= __('Information', 'viola') ?></h4>
                         <ul>
                             <li><a href="#"><?= __('About', 'viola') ?></a></li>
                             <li><a href="#"><?= __('Customer services', 'viola') ?></a></li>
@@ -48,7 +48,7 @@
                         <h4><?= __('Contact us', 'viola') ?></h4>
                         <ul>
                             <li>
-                                <p><i class="fas fa-map-marker-alt"></i><?= __('Address', 'viola') ?>: <?= __('Novomoskovsk city, Hetmanska st., 15', 'viola') ?></p>
+                                <p><i class="fas fa-map-marker-alt"></i><?= __('Address', 'viola') ?>: <?= __('Novomoskovsk city, Hetmanska st.,&nbsp;15', 'viola') ?></p>
                             </li>
                             <li>
                                 <p><i class="fas fa-phone-square"></i><?= __('Phone', 'viola') ?>: <a href="tel:+1-888705770">+1-888 705

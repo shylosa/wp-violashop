@@ -61,12 +61,12 @@
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <div class="right-phone-box">
-                    <p><?= __('Phone') ?>: <a href="#"> +38 067 792 2064</a></p>
+                    <p><?= __('Phone', 'viola') ?>: <a href="#"> +38 067 792 2064</a></p>
                 </div>
                 <div class="our-link">
                     <ul>
-                        <li><a href="#"><?= __('My account') ?></a></li>
-                        <li><a href="#"><?= __('Call us') ?></a></li>
+                        <li><a href="#"><?= __('My account', 'viola') ?></a></li>
+                        <li><a href="#"><?= __('Call us', 'viola') ?></a></li>
                     </ul>
                 </div>
             </div>
@@ -94,7 +94,7 @@
             <div class="collapse navbar-collapse" id="navbar-menu">
                 <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                     <li class="dropdown megamenu-fw">
-                        <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown"><?= __('Products') ?></a>
+                        <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown"><?= __('Products', 'viola') ?></a>
                         <ul class="dropdown-menu megamenu-content" role="menu">
                             <li>
                                 <div class="row">
@@ -151,7 +151,7 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown"><?= __('Shop') ?></a>
+                        <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown"><?= __('Shop', 'viola') ?></a>
                         <ul class="dropdown-menu">
                             <li><a href="cart.html">Cart</a></li>
                             <li><a href="checkout.html">Checkout</a></li>
@@ -160,9 +160,9 @@
                             <li><a href="shop-detail.html">Shop Detail</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="service.html"><?= __('Our Services') ?></a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html"><?= __('About') ?></a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact-us.html"><?= __('Contacts') ?></a></li>
+                    <li class="nav-item"><a class="nav-link" href="service.html"><?= __('Our Services', 'viola') ?></a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html"><?= __('About', 'viola') ?></a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact-us.html"><?= __('Contacts', 'viola') ?></a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

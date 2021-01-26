@@ -5,10 +5,10 @@ msgstr ""
 "Project-Id-Version: Viola\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/_s\n"
 "POT-Creation-Date: 2021-01-26 12:57+0200\n"
-"PO-Revision-Date: 2021-01-26 13:03+0200\n"
+"PO-Revision-Date: 2021-01-26 12:58+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: ru\n"
+"Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,67 +22,67 @@ msgstr ""
 
 #: 404.php:17
 msgid "Oops! That page can&rsquo;t be found."
-msgstr "Ой! Эту страницу невозможно найти."
+msgstr "Ой! Цю сторінку неможливо знайти."
 
 #: 404.php:21
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
-"Похоже, в этом месте ничего не было найдено. Может быть, попробуйте одну из "
-"ссылок ниже или поиск?"
+"Схоже, в цьому місці нічого не знайдено. Можливо, спробуйте одне з посилань "
+"нижче або пошук?"
 
 #: 404.php:30
 msgid "Most Used Categories"
-msgstr "Наиболее часто используемые категории"
+msgstr "Найвживаніші категорії"
 
 #: comments.php:68
 msgid "Comments are closed."
-msgstr "Комментарии закрыты."
+msgstr "Коментарі закриті."
 
 #: footer.php:21
 msgid "About Viola"
-msgstr "О Виола"
+msgstr "Про Віола"
 
 #: footer.php:35
 msgid "Information"
-msgstr "Информация"
+msgstr "Інформація"
 
 #: footer.php:37 header.php:164
 msgid "About"
-msgstr "О нас"
+msgstr "Про нас"
 
 #: footer.php:38
 msgid "Customer services"
-msgstr "Обслуживание клиентов"
+msgstr "Обслуговування клієнтів"
 
 #: footer.php:39
 msgid "Our sitemap"
-msgstr "Наша карта сайта"
+msgstr "Наша карта сайту"
 
 #: footer.php:40
 msgid "Terms &amp; conditions"
-msgstr "Условия и положения"
+msgstr "Правила та умови"
 
 #: footer.php:41
 msgid "Privacy policy"
-msgstr "Политика конфиденциальности"
+msgstr "Політика конфіденційності"
 
 #: footer.php:42
 msgid "Delivery information"
-msgstr "Информация о доставке"
+msgstr "Інформація про доставку"
 
 #: footer.php:48
 msgid "Contact us"
-msgstr "Связаться с нами"
+msgstr "Зв'яжіться з нами"
 
 #: footer.php:51
 msgid "Address"
-msgstr "Адрес"
+msgstr "Адреса"
 
 #: footer.php:51
 msgid "Novomoskovsk city, Hetmanska st.,&nbsp;15"
-msgstr "г. &nbsp;Новомосковск, ул. &nbsp;Гетманская,&nbsp;15"
+msgstr "м.&nbsp;Новомосковськ, вул.&nbsp;Гетьманська,&nbsp;15"
 
 #: footer.php:54 header.php:64
 msgid "Phone"
@@ -94,35 +94,35 @@ msgstr "Email"
 
 #: footer.php:77
 msgid "Back to top"
-msgstr "Вернуться наверх"
+msgstr "Догори"
 
 #: front-page.php:29
 msgid "Solid color curtain fabrics"
-msgstr "Однотонные ткани для штор"
+msgstr "Однотонні шторні тканини"
 
 #: front-page.php:67 index.php:67
 msgid "Featured products"
-msgstr "Рекомендуемые товары"
+msgstr "Рекомендовані товари"
 
 #: front-page.php:76
 msgid "All"
-msgstr "Все"
+msgstr "Всі"
 
 #: front-page.php:77
 msgid "Top featured"
-msgstr "Популярные"
+msgstr "Найпопулярніші"
 
 #: header.php:68
 msgid "My account"
-msgstr "Мой аккаунт"
+msgstr "Мій акаунт"
 
 #: header.php:69
 msgid "Call us"
-msgstr "Позвоните нам"
+msgstr "Зателефонуйте нам"
 
 #: header.php:97
 msgid "Products"
-msgstr "Товары"
+msgstr "Товари"
 
 #: header.php:154
 msgid "Shop"
@@ -130,56 +130,92 @@ msgstr "Магазин"
 
 #: header.php:163
 msgid "Our Services"
-msgstr "Наши услуги"
+msgstr "Наші послуги"
 
 #: header.php:165
 msgid "Contacts"
-msgstr "Контакты"
+msgstr "Контакти"
 
 #: inc/template-tags.php:83
 #, php-format
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
-msgstr "Оставить комментарий<span class=\"screen-reader-text\"> о %s</span>"
+msgstr "Залиште коментар <span class = \"screen-reader-text\"> на% s </span>"
 
 #: inc/template-tags.php:100 template-parts/content-page.php:39
 #, php-format
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
-msgstr "Редактировать <span class=\"screen-reader-text\">%s</span>"
+msgstr "Змінити <span class = \"screen-reader-text\">% s </span>"
 
 #: slider.php:8 slider.php:20 slider.php:32
 msgid "Welcome to"
-msgstr "Добро пожаловать в"
+msgstr "Ласкаво просимо до"
 
 #: slider.php:8 slider.php:20 slider.php:32
 msgid "Viola"
-msgstr "Виола"
+msgstr "Віола"
 
 #: template-parts/content-none.php:14
 msgid "Nothing Found"
-msgstr "Ничего не найдено"
+msgstr "Нічого не знайдено"
 
 #: template-parts/content-none.php:24
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
-"Готовы опубликовать свой первый пост? <a href=\"%1$s\"> Начните здесь </a>."
+"Готові опублікувати свій перший допис? <a href=\"%1$s\"> Почніть тут </a>."
 
 #: template-parts/content-none.php:37
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"К сожалению, по вашему запросу ничего не найдено. Пожалуйста, попытайтесь "
-"снова с другими ключевыми словами."
+"Вибачте, але ніщо не відповідає вашим пошуковим термінам. Спробуйте ще раз "
+"із різними ключовими словами."
 
 #: template-parts/content-none.php:44
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
-msgstr "Похоже, мы не можем найти то, что вы ищете. Возможно, поиск поможет."
+msgstr ""
+"Здається, ми не можемо знайти того, що ви шукаєте. Можливо, пошук може "
+"допомогти."
 
 #: template-parts/content.php:40
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr "Читать далее <span class = \"screen-reader-text\"> \"% s\" </span>"
+msgstr ""
+"Продовжуйте читати <span class = \"screen-reader-text\"> \"% s\" </span>"
+
+#~ msgid "Previous:"
+#~ msgstr "Попередній:"
+
+#~ msgid "Try looking in the monthly archives. %1$s"
+#~ msgstr "Спробуйте заглянути в щомісячні архіви. %1$s"
+
+#~ msgid "One thought on &ldquo;%1$s&rdquo;"
+#~ msgstr "Одна думка про & ldquo; %1$s & rdquo;"
+
+#~ msgid "Primary"
+#~ msgstr "Первинна"
+
+#~ msgid "Sidebar"
+#~ msgstr "Бічна панель"
+
+#~ msgid "Add widgets here."
+#~ msgstr "Додайте віджети сюди."
+
+#~ msgid "Posted in %1$s"
+#~ msgstr "Опубліковано в %1$s"
+
+#~ msgid "Tagged %1$s"
+#~ msgstr "Позначено %1$s"
+
+#~ msgid "Search Results for: %s"
+#~ msgstr "Результати пошуку для: %s"
+
+#~ msgid "Next:"
+#~ msgstr "Наступний:"
+
+#~ msgid "Pages:"
+#~ msgstr "Сторінки:"
