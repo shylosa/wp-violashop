@@ -16,43 +16,30 @@ get_header();
 ?>
 
     <!-- Start Slider -->
-    <?php get_template_part('slider') ?>
+<?php get_template_part('slider') ?>
     <!-- End Slider -->
 
     <!-- Start Categories  -->
     <div class="categories-shop">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="shop-cat-box">
-                        <img class="img-fluid" src="<?= _viola_assets_path('images/t-shirts-img.jpg') ?>" alt="" />
-                        <a class="btn hvr-hover" href="#"><?= __('Solid color curtain fabrics', 'viola') ?></a>
-                    </div>
-                    <div class="shop-cat-box">
-                        <img class="img-fluid" src="<?= _viola_assets_path('images/shirt-img.jpg') ?>" alt="" />
-                        <a class="btn hvr-hover" href="#">Shirt</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="shop-cat-box">
-                        <img class="img-fluid" src="<?= _viola_assets_path('images/wallet-img.jpg') ?>" alt="" />
-                        <a class="btn hvr-hover" href="#">Wallet</a>
-                    </div>
-                    <div class="shop-cat-box">
-                        <img class="img-fluid" src="<?= _viola_assets_path('images/women-bag-img.jpg') ?>" alt="" />
-                        <a class="btn hvr-hover" href="#">Bags</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="shop-cat-box">
-                        <img class="img-fluid" src="<?= _viola_assets_path('images/shoes-img.jpg') ?>" alt="" />
-                        <a class="btn hvr-hover" href="#">Shoes</a>
-                    </div>
-                    <div class="shop-cat-box">
-                        <img class="img-fluid" src="<?= _viola_assets_path('images/women-shoes-img.jpg') ?>" alt="" />
-                        <a class="btn hvr-hover" href="#">Women Shoes</a>
-                    </div>
-                </div>
+                <?php
+                $categories = get_categories(['taxonomy' => 'product_cat', 'hide_empty' => false]);
+                if ($categories) :
+                    foreach ($categories as $category) :
+                        $thumbnail_id = get_term_meta($category->term_id, 'thumbnail_id', true);
+                        $image = wp_get_attachment_url($thumbnail_id);
+                        ?>
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                            <div class="shop-cat-box">
+                                <img class="img-fluid" src="<?= $image ?>" alt=""/>
+                                <a class="btn hvr-hover" href="#"><?= $category->name ?></a>
+                            </div>
+                        </div>
+                    <?php
+                    endforeach;
+                endif;
+                ?>
             </div>
         </div>
     </div>
@@ -90,9 +77,12 @@ get_header();
                             <img src="<?= _viola_assets_path('images/img-pro-01.jpg') ?>" class="img-fluid" alt="Image">
                             <div class="mask-icon">
                                 <ul>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i
+                                                    class="fas fa-eye"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i
+                                                    class="fas fa-sync-alt"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right"
+                                           title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
                                 </ul>
                                 <a class="cart" href="#">Add to Cart</a>
                             </div>
@@ -113,9 +103,12 @@ get_header();
                             <img src="<?= _viola_assets_path('images/img-pro-02.jpg') ?>" class="img-fluid" alt="Image">
                             <div class="mask-icon">
                                 <ul>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i
+                                                    class="fas fa-eye"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i
+                                                    class="fas fa-sync-alt"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right"
+                                           title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
                                 </ul>
                                 <a class="cart" href="#">Add to Cart</a>
                             </div>
@@ -136,9 +129,12 @@ get_header();
                             <img src="<?= _viola_assets_path('images/img-pro-03.jpg') ?>" class="img-fluid" alt="Image">
                             <div class="mask-icon">
                                 <ul>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i
+                                                    class="fas fa-eye"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i
+                                                    class="fas fa-sync-alt"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right"
+                                           title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
                                 </ul>
                                 <a class="cart" href="#">Add to Cart</a>
                             </div>
@@ -159,9 +155,12 @@ get_header();
                             <img src="<?= _viola_assets_path('images/img-pro-04.jpg') ?>" class="img-fluid" alt="Image">
                             <div class="mask-icon">
                                 <ul>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i
+                                                    class="fas fa-eye"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i
+                                                    class="fas fa-sync-alt"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right"
+                                           title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
                                 </ul>
                                 <a class="cart" href="#">Add to Cart</a>
                             </div>
@@ -192,17 +191,22 @@ get_header();
                 <div class="col-md-6 col-lg-4 col-xl-4">
                     <div class="blog-box">
                         <div class="blog-img">
-                            <img class="img-fluid" src="<?= _viola_assets_path('images/blog-img.jpg') ?>" alt="" />
+                            <img class="img-fluid" src="<?= _viola_assets_path('images/blog-img.jpg') ?>" alt=""/>
                         </div>
                         <div class="blog-content">
                             <div class="title-blog">
                                 <h3>Fusce in augue non nisi fringilla</h3>
-                                <p>Nulla ut urna egestas, porta libero id, suscipit orci. Quisque in lectus sit amet urna dignissim feugiat. Mauris molestie egestas pharetra. Ut finibus cursus nunc sed mollis. Praesent laoreet lacinia elit id lobortis.</p>
+                                <p>Nulla ut urna egestas, porta libero id, suscipit orci. Quisque in lectus sit amet
+                                    urna dignissim feugiat. Mauris molestie egestas pharetra. Ut finibus cursus nunc sed
+                                    mollis. Praesent laoreet lacinia elit id lobortis.</p>
                             </div>
                             <ul class="option-blog">
-                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Likes"><i class="far fa-heart"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Views"><i class="fas fa-eye"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Comments"><i class="far fa-comments"></i></a></li>
+                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Likes"><i
+                                                class="far fa-heart"></i></a></li>
+                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Views"><i
+                                                class="fas fa-eye"></i></a></li>
+                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Comments"><i
+                                                class="far fa-comments"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -210,17 +214,22 @@ get_header();
                 <div class="col-md-6 col-lg-4 col-xl-4">
                     <div class="blog-box">
                         <div class="blog-img">
-                            <img class="img-fluid" src="<?= _viola_assets_path('images/blog-img-01.jpg') ?>" alt="" />
+                            <img class="img-fluid" src="<?= _viola_assets_path('images/blog-img-01.jpg') ?>" alt=""/>
                         </div>
                         <div class="blog-content">
                             <div class="title-blog">
                                 <h3>Fusce in augue non nisi fringilla</h3>
-                                <p>Nulla ut urna egestas, porta libero id, suscipit orci. Quisque in lectus sit amet urna dignissim feugiat. Mauris molestie egestas pharetra. Ut finibus cursus nunc sed mollis. Praesent laoreet lacinia elit id lobortis.</p>
+                                <p>Nulla ut urna egestas, porta libero id, suscipit orci. Quisque in lectus sit amet
+                                    urna dignissim feugiat. Mauris molestie egestas pharetra. Ut finibus cursus nunc sed
+                                    mollis. Praesent laoreet lacinia elit id lobortis.</p>
                             </div>
                             <ul class="option-blog">
-                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Likes"><i class="far fa-heart"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Views"><i class="fas fa-eye"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Comments"><i class="far fa-comments"></i></a></li>
+                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Likes"><i
+                                                class="far fa-heart"></i></a></li>
+                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Views"><i
+                                                class="fas fa-eye"></i></a></li>
+                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Comments"><i
+                                                class="far fa-comments"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -228,17 +237,22 @@ get_header();
                 <div class="col-md-6 col-lg-4 col-xl-4">
                     <div class="blog-box">
                         <div class="blog-img">
-                            <img class="img-fluid" src="<?= _viola_assets_path('images/blog-img-02.jpg') ?>" alt="" />
+                            <img class="img-fluid" src="<?= _viola_assets_path('images/blog-img-02.jpg') ?>" alt=""/>
                         </div>
                         <div class="blog-content">
                             <div class="title-blog">
                                 <h3>Fusce in augue non nisi fringilla</h3>
-                                <p>Nulla ut urna egestas, porta libero id, suscipit orci. Quisque in lectus sit amet urna dignissim feugiat. Mauris molestie egestas pharetra. Ut finibus cursus nunc sed mollis. Praesent laoreet lacinia elit id lobortis.</p>
+                                <p>Nulla ut urna egestas, porta libero id, suscipit orci. Quisque in lectus sit amet
+                                    urna dignissim feugiat. Mauris molestie egestas pharetra. Ut finibus cursus nunc sed
+                                    mollis. Praesent laoreet lacinia elit id lobortis.</p>
                             </div>
                             <ul class="option-blog">
-                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Likes"><i class="far fa-heart"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Views"><i class="fas fa-eye"></i></a></li>
-                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Comments"><i class="far fa-comments"></i></a></li>
+                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Likes"><i
+                                                class="far fa-heart"></i></a></li>
+                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Views"><i
+                                                class="fas fa-eye"></i></a></li>
+                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Comments"><i
+                                                class="far fa-comments"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -254,7 +268,7 @@ get_header();
         <div class="main-instagram owl-carousel owl-theme">
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="<?= _viola_assets_path('images/instagram-img-01.jpg') ?>" alt="" />
+                    <img src="<?= _viola_assets_path('images/instagram-img-01.jpg') ?>" alt=""/>
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -262,7 +276,7 @@ get_header();
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="<?= _viola_assets_path('images/instagram-img-02.jpg') ?>" alt="" />
+                    <img src="<?= _viola_assets_path('images/instagram-img-02.jpg') ?>" alt=""/>
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -270,7 +284,7 @@ get_header();
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="<?= _viola_assets_path('images/instagram-img-03.jpg') ?>" alt="" />
+                    <img src="<?= _viola_assets_path('images/instagram-img-03.jpg') ?>" alt=""/>
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -278,7 +292,7 @@ get_header();
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="<?= _viola_assets_path('images/instagram-img-04.jpg') ?>" alt="" />
+                    <img src="<?= _viola_assets_path('images/instagram-img-04.jpg') ?>" alt=""/>
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -286,7 +300,7 @@ get_header();
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="<?= _viola_assets_path('images/instagram-img-05.jpg') ?>" alt="" />
+                    <img src="<?= _viola_assets_path('images/instagram-img-05.jpg') ?>" alt=""/>
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -294,7 +308,7 @@ get_header();
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="<?= _viola_assets_path('images/instagram-img-06.jpg') ?>" alt="" />
+                    <img src="<?= _viola_assets_path('images/instagram-img-06.jpg') ?>" alt=""/>
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -302,7 +316,7 @@ get_header();
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="<?= _viola_assets_path('images/instagram-img-07.jpg') ?>" alt="" />
+                    <img src="<?= _viola_assets_path('images/instagram-img-07.jpg') ?>" alt=""/>
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -310,7 +324,7 @@ get_header();
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="<?= _viola_assets_path('images/instagram-img-08.jpg') ?>" alt="" />
+                    <img src="<?= _viola_assets_path('images/instagram-img-08.jpg') ?>" alt=""/>
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -318,7 +332,7 @@ get_header();
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="<?= _viola_assets_path('images/instagram-img-09.jpg') ?>" alt="" />
+                    <img src="<?= _viola_assets_path('images/instagram-img-09.jpg') ?>" alt=""/>
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -326,7 +340,7 @@ get_header();
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="<?= _viola_assets_path('images/instagram-img-05.jpg') ?>" alt="" />
+                    <img src="<?= _viola_assets_path('images/instagram-img-05.jpg') ?>" alt=""/>
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>

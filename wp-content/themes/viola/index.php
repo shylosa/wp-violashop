@@ -16,7 +16,7 @@ get_header();
 ?>
 
     <!-- Start Slider -->
-    <?php get_template_part('slider') ?>
+<?php get_template_part('slider') ?>
     <!-- End Slider -->
 
     <!-- Start Categories  -->

@@ -18,7 +18,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-12 col-sm-12">
                     <div class="footer-widget">
-                        <h4><?= __('About Viola', 'viola')?></h4>
+                        <h4><?= __('About Viola', 'viola') ?></h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                             laboris nisi ut aliquip ex ea commodo consequat.
@@ -48,14 +48,17 @@
                         <h4><?= __('Contact us', 'viola') ?></h4>
                         <ul>
                             <li>
-                                <p><i class="fas fa-map-marker-alt"></i><?= __('Address', 'viola') ?>: <?= __('Novomoskovsk city, Hetmanska st.,&nbsp;15', 'viola') ?></p>
+                                <p><i class="fas fa-map-marker-alt"></i><?= __('Address', 'viola') ?>
+                                    : <?= __('Novomoskovsk city, Hetmanska st.,&nbsp;15', 'viola') ?></p>
                             </li>
                             <li>
-                                <p><i class="fas fa-phone-square"></i><?= __('Phone', 'viola') ?>: <a href="tel:+1-888705770">+1-888 705
+                                <p><i class="fas fa-phone-square"></i><?= __('Phone', 'viola') ?>: <a
+                                            href="tel:+1-888705770">+1-888 705
                                         770</a></p>
                             </li>
                             <li>
-                                <p><i class="fas fa-envelope"></i><?= __('Email', 'viola') ?>: <a href="mailto:contactinfo@gmail.com">contactinfo@gmail.com</a>
+                                <p><i class="fas fa-envelope"></i><?= __('Email', 'viola') ?>: <a
+                                            href="mailto:contactinfo@gmail.com">contactinfo@gmail.com</a>
                                 </p>
                             </li>
                         </ul>
