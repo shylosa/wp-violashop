@@ -98,11 +98,11 @@ if (!function_exists('viola_setup')) :
                 'height' => 250,
                 'width' => 250,
                 'flex-width' => true,
-                'flex-height' => true,
+                'flex-height' => true
             )
         );
 
-        add_theme_support('custom-logo');
+        //add_theme_support('custom-logo');
         add_theme_support('post-formats', array('aside', 'gallery', 'image', 'video', 'audio'));
 
     }
@@ -151,9 +151,9 @@ add_action('widgets_init', 'viola_widgets_init');
 function viola_scripts()
 {
     wp_enqueue_style('viola-style', get_stylesheet_uri(), array(), _S_VERSION);
-    wp_enqueue_style('viola-bootstrap-style', _viola_assets_path('css/bootstrap.min.css'), array(), _S_VERSION);
-    wp_enqueue_style('viola-responsive-style', _viola_assets_path('css/responsive.css'), array('viola-style'), _S_VERSION);
-    wp_enqueue_style('viola-style-style', _viola_assets_path('css/style.css'), array('viola-bootstrap-style'), _S_VERSION);
+    wp_enqueue_style('viola-bootstrap-style', _viola_assets_path('css/bootstrap.min.css'), array('viola-style'), _S_VERSION);
+    wp_enqueue_style('viola-responsive-style', _viola_assets_path('css/responsive.css'), array('viola-bootstrap-style'), _S_VERSION);
+    wp_enqueue_style('viola-style-style', _viola_assets_path('css/style.css'), array('viola-responsive-style'), _S_VERSION);
     wp_enqueue_style('viola-custom-style', _viola_assets_path('css/custom.css'), array('viola-style-style'), _S_VERSION);
 
     wp_style_add_data('viola-style', 'rtl', 'replace');
@@ -231,4 +231,13 @@ function _viola_assets_path(string $path): string
 {
     return get_template_directory_uri() . '/assets/' . $path;
 }
+
+/**
+ * Changes the class on the custom logo in the header.php
+ */
+function helpwp_custom_logo_output( $html ) {
+    $html = str_replace('style', '', $html );
+    return $html;
+}
+add_filter('get_custom_logo', 'helpwp_custom_logo_output', 10);
 

@@ -902,7 +902,6 @@ ul.cart-list > li.total > .btn:hover {
 .shop-cat-box {
     margin-bottom: 30px;
     position: relative;
-    padding: 3px;
     overflow: hidden;
     height: 350px;
     border: 1px solid #010101;
@@ -934,8 +933,8 @@ ul.cart-list > li.total > .btn:hover {
 .shop-cat-box a {
     position: absolute;
     z-index: 2;
-    bottom: 0px;
-    left: 0px;
+    bottom: 0;
+    left: 0;
     right: 0;
     margin: 0 auto;
     text-align: center;
@@ -943,7 +942,10 @@ ul.cart-list > li.total > .btn:hover {
     color: #ffffff;
     font-size: 18px;
     font-weight: 700;
-    padding: 8px 0px;
+    padding: 8px 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /*------------------------------------------------------------------ Products -------------------------------------------------------------------*/

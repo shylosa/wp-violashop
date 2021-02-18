@@ -218,3 +218,13 @@
 
 
 }(jQuery));
+
+//Remove red outline from custom logo
+window.addEventListener('load', () => {
+    const violaCustomLogo = document.querySelector('.custom-logo');
+    if (typeof violaCustomLogo !== 'undefined' && violaCustomLogo) {
+        violaCustomLogo.addEventListener('mouseover', (e) => {
+            e.target.style.outline = '';
+        });
+    }
+});
